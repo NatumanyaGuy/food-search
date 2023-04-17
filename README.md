@@ -22,11 +22,14 @@ With this API, users can search for different foods and receive detailed informa
 
 ## Usage/Examples
 
+- Use `/s/{query}` to search by a word query
+- Use `/f/{id}` to search for food by ID
+
 TODO: Update API URL
 
 ```javascript
 async function logFood() {
-  const response = await fetch("http://apiurl.com/bananas");
+  const response = await fetch("https://kyakulya.onrender.com/s/bananas");
   const jsonData = await response.json();
   console.log(jsonData);
 }
