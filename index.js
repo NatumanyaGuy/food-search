@@ -16,7 +16,14 @@ app.use(bodyParser.json());
 
 // Home Route - List All Foods
 app.get("/", (req, res) => {
-  res.send(foods);
+  // res.send(foods);
+
+  let foodnames = [];
+  foods.forEach((name) => {
+    foodnames = [...foodnames, name.food_description];
+  });
+  // console.log(foodnames);
+  res.send(foodnames);
 });
 
 //Pass Random - Get random Food
